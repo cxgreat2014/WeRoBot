@@ -102,3 +102,6 @@ def test_storage(storage):
     assert storage.get("喵") == u"喵喵"
     storage.delete("喵")
     assert storage.get("喵") == {}
+    for x, y in db.items():
+        assert x == u"喵"
+        assert y == u"喵喵"
